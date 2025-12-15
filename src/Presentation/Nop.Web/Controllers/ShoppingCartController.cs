@@ -335,8 +335,8 @@ public partial class ShoppingCartController : BasePublicController
     }
 
     protected virtual async Task<IActionResult> GetProductToCartDetailsAsync(List<string> addToCartWarnings, ShoppingCartType cartType,
-        Product product)
-    {
+        Product product, int updatecartitemid =0)
+    { 
         if (addToCartWarnings.Any())
         {
             //cannot be added to the cart/wishlist
